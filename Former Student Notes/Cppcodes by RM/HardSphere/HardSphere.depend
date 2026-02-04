@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1472586553 source:d:\school papers\hall group training\intro to dmd\1_hardsphere_code\hardsphere\main.cpp
+	<iostream>
+	<iomanip>
+	<math.h>
+	<fstream>
+	<stdlib.h>
+
