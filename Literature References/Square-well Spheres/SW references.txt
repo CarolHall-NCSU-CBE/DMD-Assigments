@@ -1,0 +1,8 @@
+(1) Jin, Z.; Tang, Y.; Wu, J. A Perturbative Density Functional Theory for Square-Well Fluids. The Journal of Chemical Physics 2011, 134 (17), 174702. https://doi.org/10.1063/1.3585677.
+(2) Tang, Y.; Lu, B. C.-Y. An Analytical Analysis of the Square-Well Fluid Behaviors. The Journal of Chemical Physics 1994, 100 (9), 6665–6671. https://doi.org/10.1063/1.467026.
+(3) Heyes, D. M.; Aston, P. J. Square-Well and Square-Shoulder Fluids: Simulation and Equations of State. The Journal of Chemical Physics 1992, 97 (8), 5738–5748. https://doi.org/10.1063/1.463758.
+(4) Lee, R. J.; Chao, K. C. Equation of State for Square-Well Fluids. Molecular Physics 1988, 65 (5), 1253–1256. https://doi.org/10.1080/00268978800101741.
+(5) Henderson, D.; Madden, W. G.; Fitts, D. D. Monte Carlo and Hypernetted Chain Equation of State for the Square-Well Fluid. The Journal of Chemical Physics 1976, 64 (12), 5026–5034. https://doi.org/10.1063/1.432175.
+(6) Smith, W. R.; Henderson, D.; Barker, J. A. Perturbation Theory and the Radial Distribution Function of the Square-Well Fluid. The Journal of Chemical Physics 1971, 55 (8), 4027–4033. https://doi.org/10.1063/1.1676696.
+(7) Rotenberg, A. Monte Carlo Equation of State for Hard Spheres in an Attractive Square Well. The Journal of Chemical Physics 1965, 43 (4), 1198–1201. https://doi.org/10.1063/1.1696904.
+(8) Alder, B. J.; Wainwright, T. E. Studies in Molecular Dynamics. I. General Method. The Journal of Chemical Physics 1959, 31 (2), 459–466. https://doi.org/10.1063/1.1730376.

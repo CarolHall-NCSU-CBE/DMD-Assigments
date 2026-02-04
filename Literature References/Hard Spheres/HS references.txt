@@ -1,0 +1,23 @@
+You only need to find what their compressibility (Z) is (equation or simulation values) and what is their radial distribution (gr). Compare their values and your simulation value under same condition (density and temperature) 
+[1]
+M.N. Bannerman, L. Lue, L.V. Woodcock, Thermodynamic pressures for hard spheres and closed-virial equation-of-state, The Journal of Chemical Physics 132 (2010) 084507. https://doi.org/10.1063/1.3328823.
+[2]
+A. Trokhymchuk, I. Nezbeda, J. Jirsák, D. Henderson, Erratum: “Hard sphere radial distribution function again” [J. Chem. Phys. 123, 024501 (2005)], The Journal of Chemical Physics 124 (2006) 149902. https://doi.org/10.1063/1.2188941.
+[3]
+A. Trokhymchuk, I. Nezbeda, J. Jirsák, D. Henderson, Hard-sphere radial distribution function again, The Journal of Chemical Physics 123 (2005) 024501. https://doi.org/10.1063/1.1979488.
+[4]
+Y.-X. Yu, J. Wu, A fundamental-measure theory for inhomogeneous associating fluids, The Journal of Chemical Physics 116 (2002) 7094–7103. https://doi.org/10.1063/1.1463435.
+[5]
+R.J. Speedy, Pressure and entropy of hard-sphere crystals, J. Phys.: Condens. Matter 10 (1998) 4387–4391. https://doi.org/10.1088/0953-8984/10/20/006.
+[6]
+J.M. Kincaid, J.J. Weis, Radial distribution function of a hard-sphere solid, Molecular Physics 34 (1977) 931–938. https://doi.org/10.1080/00268977700102241.
+[7]
+P.R. Bienkowski, H.S. Denenholz, K. Chao, A generalized hard‐sphere augmented virial equation of state, AIChE Journal 19 (1973) 167–173. https://doi.org/10.1002/aic.690190124.
+[8]
+N.F. Carnahan, K.E. Starling, Equation of State for Nonattracting Rigid Spheres, The Journal of Chemical Physics 51 (1969) 635–636. https://doi.org/10.1063/1.1672048.
+[9]
+B.J. Alder, W.G. Hoover, D.A. Young, Studies in Molecular Dynamics. V. High-Density Equation of State and Entropy for Hard Disks and Spheres, The Journal of Chemical Physics 49 (1968) 3688–3696. https://doi.org/10.1063/1.1670653.
+[10]
+E. Thiele, Equation of State for Hard Spheres, The Journal of Chemical Physics 39 (1963) 474–479. https://doi.org/10.1063/1.1734272.
+[11]
+B.J. Alder, T.E. Wainwright, Phase Transition for a Hard Sphere System, The Journal of Chemical Physics 27 (1957) 1208–1209. https://doi.org/10.1063/1.1743957.
