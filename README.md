@@ -119,11 +119,11 @@ Extend the hard-sphere code to include attractive interactions.
 
 ### Required Modifications
 - Add a **square-well potential**
-  - Modify `bump`, `uplist`, and `dnlist`
-- Implement an **Andersen thermostat** (`ghostcoll` in `SW_Haoyu.f90`)
+  - Modify subroutines `bump`, `uplist`, and `dnlist`
+- Implement an **Andersen thermostat** (subroutine `ghostcoll` in `SW_Haoyu.f90`)
 - Compute:
-  - **Kinetic energy** and system temperature (`kecal`)
-  - **Potential energy** (`pecal`)
+  - **Kinetic energy** and system temperature (subroutine `kecal`)
+  - **Potential energy** (subroutine `pecal`)
   - **Total energy** to confirm equilibration
 
 ### Analysis Tasks
@@ -132,7 +132,7 @@ Extend the hard-sphere code to include attractive interactions.
 - Compare all results with literature values
 
 **References/Resources:**  
-`Literature References/Square-well Spheres`
+See directory `Literature References/Square-well Spheres`
 
 ---
 
@@ -143,7 +143,7 @@ Extend the square-well model to simulate **polymeric chains**.
 
 ### System Requirements
 - Chains of **4 or 16 spheres**
-- Bonded neighbors must satisfy:  
+- Bonded neighbors on a chain are allowed to move between:  
   `σ(1 − δ) ≤ r ≤ σ(1 + δ)`
 
 ### Initial Configurations
@@ -155,7 +155,7 @@ Extend the square-well model to simulate **polymeric chains**.
 - Generate RDFs and compare with literature
 
 **References/Resources:**  
-`Literature References/Square-well Chains`
+See directory `Literature References/Square-well Chains`
 
 ---
 
@@ -178,6 +178,6 @@ Smith, Hall, Freeman
 
 ### Additional Resources
 See the directory **Former Student Notes**, which includes:
-- Complete DMD assignments in C++ (Dr. Ryan Malony)
+- A completed DMD assignments written in C++ (by Dr. Ryan Malony)
 - Results and notes from Corey Febo and Haoyu Wang
 - Van Nguyen’s personal notes on learning DMD
