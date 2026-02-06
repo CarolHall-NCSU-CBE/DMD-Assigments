@@ -189,3 +189,18 @@ To extract .tar or .zip files: `tar -zxf filename`
 
 Extracted files will appear in the current directory.
 
+### Editing Files with Vi
+
+Vi is a terminal-based text editor.
+
+Common Commands:
+
+| Action | Command |
+|------|--------|
+| Open file | `vi file_name` |
+| Enter insert mode | `i` |
+| Save and quit | `:wq` |
+| Quit | `:q` |
+| Quit without saving | `:q!` |
+
+Press `Esc` to exit insert mode.
