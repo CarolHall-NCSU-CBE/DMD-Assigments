@@ -108,11 +108,13 @@ Executables must be run from their directory:
 
 ```bash
 ./executable_name
+```
 
 With required arguments:
 
 ```bash
 ./executable_name arg1 arg2 arg3
+```
 
 If unsure which arguments are required, run the executable without arguments and read the error message.
 
@@ -122,4 +124,4 @@ If you see “permission denied”:
 
 ```bash
 chmod +x executable_name
-
+```
