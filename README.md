@@ -1,80 +1,187 @@
-# DMD-Assigments
-This is the DMD assignment for new student entering the Hall group.
+# DMD Introductory Exercises  
+**Hall Group – New Graduate Student Onboarding**
 
-Programs to download
+This document outlines the recommended training path for new graduate students who will be working with **Discontinuous Molecular Dynamics (DMD)** and related simulation codes in the group. The goal is to build a strong foundation in Linux, programming, and statistical mechanics before transitioning to research-level DMD/PRIME20 projects.
 
-Windows:
+---
 
-Notepad++: Text editor that will display code neatly
+## Recommended Software
 
-WinSCP: File transfer to lab computers
+The following tools are **suggested** to make it easier to work with lab computers and simulation codes.  
+Students may use equivalent tools based on personal preference or operating system.
 
-PuTTY: Remote access to lab computers
+### Commonly Used Options (Windows)
+- **Notepad++** – Lightweight text editor for viewing and editing source code  
+  *(Alternatives: VS Code, Sublime Text, Vim, Emacs)*
 
-Spring First Year
+- **WinSCP** – Secure file transfer between local machines and lab computers  
+  *(Alternatives: scp, rsync, FileZilla)*
 
-Choose a programming language (Fortran is useful for working with PRIME20 in the future, C++ and Python are currently useful for peptide design projects).
+- **PuTTY** – SSH client for remote access to lab computers  
+  *(Alternatives: Windows Terminal, OpenSSH, MobaXterm)*
 
-Summer/Fall First Year
+### macOS / Linux
+- Native **Terminal**, **scp/rsync**, and **SSH** tools are typically sufficient  
+- Any modern code editor (VS Code, Vim, Emacs, etc.) is acceptable
 
-- Hard Sphere Code:
-  - Create a code to run simulations of hard spheres. To do this you can use the two provided Fortran codes as a guide, and work to rewrite these codes into C++. Your code will need to
-    - Place spheres in a simulation box on an FCC lattice (subroutine createcoord in swnvt4.f90)
-    - Assign spheres an initial velocity based on a Gaussian distribution (subroutines createvel, gauss in swnvt4.f90)
-    - Ensure that none of the particles are overlapping (subroutine check in hardspehrerd.f90)
-    - Calculate initial collision times (subroutine uplist in hardsphererd.f90)
-    - Begin moving the particles and letting them collide (Start of Dynamics section in hardsphererd.f90, requires subroutines bump, uplist, dnlist in hardsphererd.f90)
-    - Compute compressibility factor (done using virial accumulator and the calculations after END OF DYNAMICS in hardsphererd.f90)
-    - Compute radial distribution function (subroutine grsort in hardsphererd.f90)
-  - compute the compressibility factor at various densities and compare to literature values
-  - create a radial distribution diagram for systems at different densities and compare to literature
+> **Note:**  
+> Regardless of tool choice, all students should be comfortable with:
+> - Editing plain-text source files  
+> - Transferring files to and from remote machines  
+> - Accessing lab computers via SSH  
 
-OTHER THINGS TO CONSIDER:
+---
 
-- hardsphererd.f90 takes reduced (number) density as an input, most of the literature reports values in terms of η (volume fraction), so you will need to convert between the two--also Dr. Hall likes to see volume fractions rather than reduced density.
-- If you want to see what is happening in your simulations, you can use VMD to visualize how the spheres are positioned in the box. Once you get the particles placed on the initial lattice, you can use VMD to check and see that it is right. Ask for code on writing out files that VMD can read, as the program requires specific input files.
-- Valgrind can be a useful program to finding errors in your code, please see the separate document for instructions on using this.
+## Spring Semester – First Year  
+**Foundations**
 
-References/Resources
+During your first semester, focus on building computational fundamentals.
 
-- Fortran hard sphere code (note that this code does not have information on creating the initial configuration and assigning initial velocity, use the square well code swnvt.f90 code for this)
-- Allen, Tildesley. Computer Simulation of Liquids, 1987.
-- Carnahan, N.F., Starling, K.E., Equation of State for Nonattracting Rigid Spheres.
-- Alder, B.J., Hoover, W.G., Young, D.A., Studies in Molecular Dynamics. V.
-- Alder, B.J., Wainwright, T.E., Studies in Molecular Dynamics. I.
-- HardSphereMD_2 document (included in literature reference folder--explains the basics of pairwise collisions, the integration strategy, uplists, and downlists with figures)
+### Core Skills
+- Become comfortable working in a **Linux environment**
+- Learn to use **Git/GitHub** for version control
+- Choose and begin learning a **programming language**
 
-- Square-well Sphere Code:
-  - modify your hard sphere code to include an attractive interaction based on a square well potential (will require changes in bump, uplist, dnlist)
-  - use an Andersen thermostat to maintain a constant temperature (subroutine ghostcoll in swnvt4.f90)
-  - Write code to calculate kinetic and potential energy of the system, use kinetic energy to calculate the system temperature and ensure your thermostat is keeping the temperature constant (subroutine kecalc, pecalc in swnvt4.f90)
-  - Calculate the total energy to ensure the system has reached equilibrium
-  - compute the compressibility factor at various temperatures and densities and compare to literature values
-  - create a radial distribution diagram for systems at different densities
+> **Language guidance:**  
+> - **Fortran** – highly recommended for future work with PRIME20  
+> - **C/C++** – useful for performance-critical DMD development  
+> - **Python** – useful for data analysis, automation, and visualization  
 
-References/Resources
+### Recommended Beginner Resources
+- **Linux**:  
+  https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting  
+- **Git/GitHub**:  
+  https://www.coursera.org/learn/introduction-git-github  
+- **C Programming**:  
+  https://www.coursera.org/specializations/c-programming  
+- **Fortran**:  
+  https://fortran-lang.org/learn/  
+- **Python**:  
+  https://www.coursera.org/learn/python-programming-intro  
 
-- Fortran square-well sphere code
-- Allen, Tildesley. Computer Simulation of Liquids, 1987.
-- Henderson D. Madden W.G., Fitts D.D. Monte Carlo and hypernetted chain equation of state for the square-well fluid. 1976.
-- Lee, R.J., Chao, K.C. Equation of state for square-well fluids. 1988.
-- Tang, Y., Lu, B.C.-Y. An analytical analysis of the square-well fluid behaviors. 1994
+---
 
-- Square-well Chains:
-  - modify your square-well code to model chains of either 4 or 16 spheres
-    - spheres next to each other on a chain are allowed to move between σ(1±δ)
-    - There are two ways to create the initial configuration: random configuration (done in the Fortran Code) or along a "lattice". Try the random configuration first and if it doesn't work out, move on to trying a lattice.
-  - compute the compressibility factor at various temperatures and densities and compare to literature values
-  - create a radial distribution diagram for systems at different densities
+## Summer / Fall – First Year  
+**DMD Programming Exercises**
 
-References/Resources
+The following exercises introduce core DMD concepts using progressively more complex systems. Students are encouraged to write clean, well-documented code and validate results against published literature.
 
-- Fortran code swcnopdb.f90
-- Yeom, M.S., Chang, J., Kim, H. Development of the semi-empirical equation of state for square-well chain fluid based on statistical associating fluid theory (SAFT). 1999
-- Tavares, F., Chang, J., Sandler, S. Equation of state for the square-well chain fluid based on the dimer version of Wertheim's perturbation theory. 1995
+---
 
-- Efficiency Techniques
-  - Implement the efficiency techniques discussed in: Smith, Hall, Freeman. Molecular Dynamics for Polymeric Fluids Using Discontinuous Potentials. Journal of Computational Physics, 1996, **134**, 16-30
-  - Start with False Positioning (the easiest to implement, but without neighbor lists will only slow down your code)
-  - Move on to Neighbor lists/Link Lists
-    - These work together so it is a good idea to work on them at the same time.
+## 1. Hard Sphere (HS) Simulations
+
+### Objectives
+Write a code to simulate hard spheres using DMD. Two existing Fortran codes are provided as references. You may rewrite the code in **Fortran, C/C++, or another suitable language**.
+
+### Required Components
+Your code should be able to:
+
+1. **Initialize particle positions and velocities**
+   - Place spheres in a simulation box on an **FCC lattice** (`coordinate_and_vel`)
+   - Optionally generate **random initial positions** (recommended for very low or very high densities)
+   - Assign initial velocities from a **Gaussian distribution**
+
+2. **Ensure valid configurations**
+   - Verify that particles do not overlap (`check_position`)
+
+3. **Set up event scheduling**
+   - Calculate initial collision times (`uplist`)
+   - Advance particles and handle collisions (Start of *Dynamics* section in `HS_Haoyu.F90`)
+   - Required subroutines:
+     - `find_tmin_and_update`
+     - `uplist`
+     - `dnlist`
+
+4. **Compute physical observables**
+   - **Compressibility factor** using the virial accumulator  
+     (lines 443–445 in `find_tmin_and_update`; see Allen & Tildesley, pp. 46–48)
+   - **Radial distribution function (RDF)**  
+     (`grsort` in `hardsphererd.f90`; Allen & Tildesley, pp. 54–55)
+
+### Analysis Tasks
+- Compute the compressibility factor over a range of densities and compare with literature values  
+- Generate RDF plots at different densities and compare with published results  
+
+### Notes and Practical Tips
+- `HS_Haoyu.F90` uses **reduced number density**, while most literature reports **volume fraction (η)**  
+  → Convert between the two  
+  → Use **volume fraction** in plots and reports (Dr. Hall’s preference)
+- Visualization:
+  - Use **VMD** to inspect particle configurations
+  - XYZ output can be enabled by uncommenting lines **95, 96, and 109** in `HS_Haoyu.F90`
+  - Ask for help if you need example output formats
+
+**References/Resources:**  
+`Literature References/Hard Spheres`
+
+---
+
+## 2. Square-Well (SW) Spheres
+
+### Objectives
+Extend the hard-sphere code to include attractive interactions.
+
+### Required Modifications
+- Add a **square-well potential**
+  - Modify `bump`, `uplist`, and `dnlist`
+- Implement an **Andersen thermostat** (`ghostcoll` in `SW_Haoyu.f90`)
+- Compute:
+  - **Kinetic energy** and system temperature (`kecal`)
+  - **Potential energy** (`pecal`)
+  - **Total energy** to confirm equilibration
+
+### Analysis Tasks
+- Compute compressibility factors at multiple **temperatures and densities**
+- Generate RDFs for different state points
+- Compare all results with literature values
+
+**References/Resources:**  
+`Literature References/Square-well Spheres`
+
+---
+
+## 3. Square-Well Chains
+
+### Objectives
+Extend the square-well model to simulate **polymeric chains**.
+
+### System Requirements
+- Chains of **4 or 16 spheres**
+- Bonded neighbors must satisfy:  
+  `σ(1 − δ) ≤ r ≤ σ(1 + δ)`
+
+### Initial Configurations
+- Random initial configurations (recommended starting point)
+- Lattice-based configurations if random initialization fails
+
+### Analysis Tasks
+- Compute compressibility factors vs. temperature and density
+- Generate RDFs and compare with literature
+
+**References/Resources:**  
+`Literature References/Square-well Chains`
+
+---
+
+## 4. Efficiency Techniques (Advanced)
+
+### Objectives
+Improve performance using standard DMD efficiency techniques.
+
+### Required Reading
+Smith, Hall, Freeman  
+*Molecular Dynamics for Polymeric Fluids Using Discontinuous Potentials*  
+**Journal of Computational Physics**, 1996, 134, 16–30
+
+### Implementation Path
+1. **False positioning**
+   - Easiest to implement
+   - Limited benefit without neighbor lists
+2. **Neighbor lists / link lists**
+   - Implement together for best performance gains
+
+### Additional Resources
+See the directory **Former Student Notes**, which includes:
+- Complete DMD assignments in C++ (Dr. Ryan Malony)
+- Results and notes from Corey Febo and Haoyu Wang
+- Van Nguyen’s personal notes on learning DMD
