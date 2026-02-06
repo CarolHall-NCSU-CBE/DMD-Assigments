@@ -39,3 +39,86 @@ Human-readable files containing code, inputs, or outputs.
 
 Examples: `.txt .out .err .cpp .f90 .py .readme`
 
+
+### Executables
+Compiled programs that can be run but not read as text.
+
+Examples: `.exe .bin`
+
+
+### Compressed Files
+Collections of files bundled together.
+
+Examples: `.zip .tar`
+
+
+> Most simulation codes begin as text files and are compiled into executables.
+
+---
+
+## 3. Editing Files
+
+### Local Editing
+Use a text editor with:
+- Line numbers
+- Syntax highlighting
+
+These features are essential for debugging.
+
+### Remote Editing
+- Small edits: edit directly via file-transfer tools
+- Larger edits: download → edit locally → upload
+
+⚠️ Avoid opening very large output files in GUI tools — use terminal commands instead.
+
+---
+
+## 4. Accessing Remote Systems (SSH)
+
+You will use SSH to:
+- Navigate directories
+- Compile and run codes
+- Submit HPC jobs
+
+After logging in, you will see a **command prompt** indicating the system is ready for input.
+
+---
+
+## 5. Essential Terminal Commands
+
+| Task | Command |
+|----|----|
+| Show current directory | `pwd` |
+| List directory contents | `ls` |
+| Change directory | `cd path/` |
+| Go up one level | `cd ../` |
+| Run executable | `./executable_name` |
+| Stop a command | `Ctrl + C` |
+| Log out | `logout` |
+
+> Commands are **case-sensitive**.
+
+You can scroll through previous commands using the **up arrow**, and autocomplete file names using **Tab**.
+
+---
+
+## 6. Running Executables
+
+Executables must be run from their directory:
+
+```bash
+./executable_name
+
+With required arguments:
+
+./executable_name arg1 arg2 arg3
+
+
+If unsure which arguments are required, run the executable without arguments and read the error message.
+
+Permission Errors
+
+If you see “permission denied”:
+
+chmod +x executable_name
+
