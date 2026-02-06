@@ -62,6 +62,18 @@ During your first semester, focus on building computational fundamentals.
 
 The following exercises introduce core DMD concepts from simple to complex systems. Students are encouraged to write clean, well-documented code and validate results against published literature.
 
+## Getting Started Tutorials
+
+The **Computing Systems and Simulations Tutorial** provides an introduction to:
+
+- Working on lab workstations and HPC systems
+- File types, file transfers, and text editing
+- Using SSH, compiling codes, and debugging
+- Submitting jobs to the HPC cluster
+- Basic visualization with VMD
+
+> This tutorial is a **reference guide** for a beginner.  
+
 ---
 
 ## 1. Hard Sphere (HS) Simulations
