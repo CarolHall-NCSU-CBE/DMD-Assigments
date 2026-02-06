@@ -125,3 +125,15 @@ If you see “permission denied”:
 ```bash
 chmod +x executable_name
 ```
+
+## 7. Transferring Files
+
+Files can be transferred using:
+
+- Drag-and-drop via GUI tools such as WinSCP
+
+- Terminal commands
+
+After running simulations, refresh directories to see newly generated files.
+
+⚠️ Large files should be inspected using terminal tools or analysis scripts.
