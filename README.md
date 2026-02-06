@@ -67,21 +67,21 @@ The following exercises introduce core DMD concepts from simple to complex syste
 ## 1. Hard Sphere (HS) Simulations
 
 ### Objectives
-Write a code to simulate hard spheres using DMD. Two existing Fortran codes are provided as references. You may rewrite the code in **Fortran, C/C++, or another suitable language**.
+Write a code to simulate hard spheres using DMD. An existing Fortran codes from a former student (`HS_Haoyu.F90`) is provided as references. You may rewrite the code in **Fortran, C/C++, or another suitable language**.
 
 ### Required Components
 Your code should be able to:
 
 1. **Initialize particle positions and velocities**
-   - Place spheres in a simulation box on an **FCC lattice** (`coordinate_and_vel`)
+   - Place spheres in a simulation box on an **FCC lattice** (subroutine `coordinate_and_vel`)
    - Optionally generate **random initial positions** (recommended for very low or very high densities)
    - Assign initial velocities from a **Gaussian distribution**
 
 2. **Ensure valid configurations**
-   - Verify that particles do not overlap (`check_position`)
+   - Verify that particles do not overlap (subroutine `check_position`)
 
 3. **Set up event scheduling**
-   - Calculate initial collision times (`uplist`)
+   - Calculate initial collision times (subroutine `uplist`)
    - Advance particles and handle collisions (Start of *Dynamics* section in `HS_Haoyu.F90`)
    - Required subroutines:
      - `find_tmin_and_update`
@@ -90,9 +90,9 @@ Your code should be able to:
 
 4. **Compute physical observables**
    - **Compressibility factor** using the virial accumulator  
-     (lines 443–445 in `find_tmin_and_update`; see Allen & Tildesley, pp. 46–48)
+     (lines 443–445 in subroutine `find_tmin_and_update`; see Allen & Tildesley, pp. 46–48)
    - **Radial distribution function (RDF)**  
-     (`grsort` in `hardsphererd.f90`; Allen & Tildesley, pp. 54–55)
+     (subroutine `grsort` in `HS_Haoyu.F90`; Allen & Tildesley, pp. 54–55)
 
 ### Analysis Tasks
 - Compute the compressibility factor over a range of densities and compare with literature values  
@@ -108,7 +108,7 @@ Your code should be able to:
   - Ask for help if you need example output formats
 
 **References/Resources:**  
-`Literature References/Hard Spheres`
+See directory `Literature References/Hard Spheres`
 
 ---
 
