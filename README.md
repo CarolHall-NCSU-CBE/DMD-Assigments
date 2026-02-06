@@ -7,28 +7,25 @@ This document outlines the recommended training path for new graduate students w
 
 ## Recommended Software
 
-The following tools are **suggested** to make it easier to work with lab computers and simulation codes.  
+The following tools are **suggested** to make it easier to work with lab computing clusters and the NCSU HPC Hazel.  
 Students may use equivalent tools based on personal preference or operating system.
 
 ### Commonly Used Options (Windows)
 - **Notepad++** – Lightweight text editor for viewing and editing source code  
-  *(Alternatives: VS Code, Sublime Text, Vim, Emacs)*
 
 - **WinSCP** – Secure file transfer between local machines and lab computers  
-  *(Alternatives: scp, rsync, FileZilla)*
 
 - **PuTTY** – SSH client for remote access to lab computers  
-  *(Alternatives: Windows Terminal, OpenSSH, MobaXterm)*
+  *(Alternatives: Windows Terminal, OpenSSH)*
 
 ### macOS / Linux
-- Native **Terminal**, **scp/rsync**, and **SSH** tools are typically sufficient  
-- Any modern code editor (VS Code, Vim, Emacs, etc.) is acceptable
+- Mac/Linux users can use native terminal and SCP tools
 
 > **Note:**  
 > Regardless of tool choice, all students should be comfortable with:
 > - Editing plain-text source files  
 > - Transferring files to and from remote machines  
-> - Accessing lab computers via SSH  
+> - Accessing HPC and lab clusters via SSH  
 
 ---
 
