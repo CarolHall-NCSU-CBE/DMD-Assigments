@@ -36,8 +36,7 @@ During your first semester, focus on building computational fundamentals.
 
 ### Core Skills
 - Become comfortable working in a **Linux environment**
-- Learn to use **Git/GitHub** for version control
-- Choose and begin learning a **programming language**
+- Choose and begin learning a **programming language** if you are not familiar with programing
 
 > **Language guidance:**  
 > - **Fortran** – highly recommended for future work with PRIME20  
