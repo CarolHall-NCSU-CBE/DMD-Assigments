@@ -137,3 +137,55 @@ Files can be transferred using:
 After running simulations, refresh directories to see newly generated files.
 
 ⚠️ Large files should be inspected using terminal tools or analysis scripts.
+
+## 8. Group Workstations
+
+We currently have 1 CPU and 2 GPUs workstations for the exclusive use of members of the Hall group. If you are new to our group, contact the OIT Help Desk to get access to our workstations.
+
+## 9. High-Performance Computing (HPC)
+
+HPC access: `login.hpc.ncsu.edu`
+
+Your working directory: `/gpfs_common/share/username/`
+
+Important Rules
+
+❌ Do not run simulations on login nodes
+✅ Use login nodes only for editing, compiling, and job submission
+
+Jobs run on compute nodes via the scheduling system.
+
+### Checking Job Status - bjobs
+
+Useful options:
+```
+bjobs -u all -q queue_name
+bjobs -u all -q queue_name | less
+```
+
+### Submitting Jobs to HPC
+
+Jobs are submitted using a script file. Example Submission Script:
+
+```
+#!/bin/bash
+#BSUB -q single_chassis
+#BSUB -n 2
+#BSUB -W 120
+#BSUB -J job_name
+#BSUB -o sim%J.out
+#BSUB -e sim%J.err
+
+./executable_name input_file
+```
+
+Submit with: `bsub < script_name`
+
+Jobs may wait in the queue before starting.
+
+### Extracting Compressed Files
+
+To extract .tar or .zip files: `tar -zxf filename`
+
+Extracted files will appear in the current directory.
+
