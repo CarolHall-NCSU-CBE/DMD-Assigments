@@ -204,3 +204,23 @@ Common Commands:
 | Quit without saving | `:q!` |
 
 Press `Esc` to exit insert mode.
+
+## 10. Visualization with VMD
+
+VMD is used to:
+
+- View molecular structures
+
+- Create images and movies
+
+Basic Workflow
+
+- Open VMD
+
+- Load a structure file (.pdb, .xyz)
+
+- Adjust representations and colors
+
+- Render images using Tachyon
+
+⚠️ On Windows 11, only VMD 2.0 is supported. However, the new VMD is not functioning as well as the old VMD 1.9. The secondary structure calculation fails to work and the displace of secondary structure is not as accurate as the old version.
