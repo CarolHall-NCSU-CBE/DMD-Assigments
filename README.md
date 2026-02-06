@@ -1,7 +1,7 @@
 # DMD Introductory Exercises  
 **Hall Group – New Graduate Student Onboarding**
 
-This document outlines the recommended training path for new graduate students who will be working with **Discontinuous Molecular Dynamics (DMD)** and related simulation codes in the group. The goal is to build a strong foundation in Linux, programming, and statistical mechanics before transitioning to research-level DMD/PRIME20 projects.
+This document outlines the recommended training path for new graduate students who will be working with **Discontinuous Molecular Dynamics (DMD)** and related simulation codes in the group. The goal is to build a strong foundation in Linux, programming, and statistical mechanics before you start your research projects.
 
 ---
 
