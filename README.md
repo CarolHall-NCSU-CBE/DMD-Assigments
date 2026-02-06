@@ -57,7 +57,7 @@ During your first semester, focus on building computational fundamentals.
 
 ---
 
-## Summer / Fall – First Year  
+## Summer - First Year / Fall – Second Year  
 **DMD Programming Exercises**
 
 The following exercises introduce core DMD concepts using progressively more complex systems. Students are encouraged to write clean, well-documented code and validate results against published literature.
