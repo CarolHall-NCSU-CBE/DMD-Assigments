@@ -40,7 +40,7 @@ During your first semester, focus on building computational fundamentals.
 
 > **Language guidance:**  
 > - **Fortran** – highly recommended for future work with PRIME20  
-> - **C/C++** – useful for performance-critical DMD development  
+> - **C/C++** – might be useful for future work with other simulation software  
 > - **Python** – useful for data analysis, automation, and visualization  
 
 ### Recommended Beginner Resources
